@@ -58,7 +58,7 @@ function Dashboard() {
     } catch (e) {
       alert('Logout failed to contact server, but you have been logged out locally.');
     }
-    navigate('/login', { replace: true });
+    navigate('/', { replace: true });
   };
 
   const fetchTasks = async () => {
@@ -135,7 +135,7 @@ function Dashboard() {
         display: 'block'
       }}>
         {/* Wide faded illustration */}
-        <img src="/image.png" alt="Dashboard Illustration" style={{
+        <img src="/image1.png" alt="Dashboard Illustration" style={{
           position: 'absolute',
           top: 0,
           right: 0,
@@ -153,7 +153,7 @@ function Dashboard() {
             <div className="dashboard-title" style={{ fontSize: '2.3rem', fontWeight: 700, marginBottom: 8, marginTop: 0, color: '#fff', letterSpacing: '-1px' }}>Welcome to Dashboard</div>
           </div>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', marginLeft: 18, marginTop: 0 }} ref={logoutRef}>
-            <span style={{ color: '#fff', fontWeight: 500, fontSize: 18, marginRight: 8 }}>{localStorage.getItem('userEmail')?.split('@')[0]?.charAt(0).toUpperCase() + localStorage.getItem('userEmail')?.split('@')[0]?.slice(1) || 'User'} M.</span>
+            <span style={{ color: '#fff', fontWeight: 500, fontSize: 18, marginRight: 8 }}>{localStorage.getItem('userEmail')?.split('@')[0]?.charAt(0).toUpperCase() + localStorage.getItem('userEmail')?.split('@')[0]?.slice(1) || 'User'}</span>
             <div
               style={{ width: 38, height: 38, borderRadius: '50%', background: 'linear-gradient(135deg, #4be08a 60%, #1b2e2e 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 20, border: '2px solid #fff', cursor: 'pointer', position: 'relative' }}
               onClick={() => setShowLogout((v) => !v)}
@@ -191,7 +191,7 @@ function Dashboard() {
           />
           <CustomDropdown
             label="Pending"
-            options={["All Task", "Ongoing", "Pending", "Collaborative Task", "Done"]}
+            options={["All Task", "Done","Ongoing", "Pending", "Collaborative Task"]}
             selected={filterStatus}
             onChange={setFilterStatus}
             multi

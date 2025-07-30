@@ -50,7 +50,7 @@ export default function TaskDetailsPage() {
     } catch (e) {
       alert('Logout failed to contact server, but you have been logged out locally.');
     }
-    navigate('/login', { replace: true });
+    navigate('/', { replace: true });
   };
 
   React.useEffect(() => {
@@ -97,7 +97,7 @@ export default function TaskDetailsPage() {
       {/* Dashboard-style gradient header and nav */}
       <div style={{
         width: '100%',
-        minHeight: 110,
+        minHeight: 130,
         background: 'radial-gradient(ellipse at left top, #1b2e2e 60%, #1b2e2e 80%, #1b2e2e 100%, #1b2e2e 100%)',
         borderBottomLeftRadius: 32,
         borderBottomRightRadius: 32,
@@ -129,10 +129,10 @@ export default function TaskDetailsPage() {
             <svg style={{ marginLeft: 6, cursor: 'pointer' }} width="18" height="18" viewBox="0 0 20 20" fill="none" onClick={() => setShowLogout((v) => !v)}><path d="M7 8l3 3 3-3" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             {/* Logout dropdown */}
             {showLogout && (
-              <div style={{ position: 'absolute', top: 48, right: 0, background: '#fff', borderRadius: 8, boxShadow: '0 2px 12px rgba(0,0,0,0.13)', minWidth: 120, zIndex: 10, padding: '8px 0' }}>
+               <div style={{ position: 'absolute', top: 48, right: -12, background: '#fff', borderRadius:5, boxShadow: '0 2px 12px rgba(0,0,0,0.13)', minWidth: 45, zIndex: -33, padding: '8px 0' }}>
                 <button
                   onClick={handleLogout}
-                  style={{ display: 'flex', alignItems: 'center', width: '100%', background: 'none', border: 'none', color: '#e74c3c', fontWeight: 600, fontSize: 16, padding: '10px 20px', cursor: 'pointer', gap: 10 }}
+                  style={{ display: 'flex', alignItems: 'center', width: '100%', background: 'none', border: 'none', color: '#e74c3c', fontWeight: 600, fontSize: 16, padding: '-10px 20px', cursor: 'pointer', gap: 10 }}
                 >
                   <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M16 17l5-5m0 0l-5-5m5 5H9" stroke="#e74c3c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M19 12a7 7 0 11-14 0 7 7 0 0114 0z" stroke="#e74c3c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   Log out
@@ -143,7 +143,7 @@ export default function TaskDetailsPage() {
         </div>
       </div>
       {/* Main card */}
-      <div className="dashboard-container" style={{ marginTop: 32, maxWidth: 1100, background: '#fff', borderRadius: 16, boxShadow: '0 2px 16px rgba(0,0,0,0.07)', padding: '32px 40px', marginLeft: 'auto', marginRight: 'auto' }}>
+      <div className="dashboard-container" style={{ marginTop: 94, maxWidth: 1100, background: '#fff', borderRadius: 16, boxShadow: '0 2px 16px rgba(0,0,0,0.07)', padding: '32px 40px', marginLeft: 'auto', marginRight: 'auto' }}>
         <CongratulationsModal open={showCongrats} onClose={handleCongratsClose} />
         {/* Header row */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18 }}>

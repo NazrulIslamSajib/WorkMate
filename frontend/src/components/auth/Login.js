@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
-  const [email, setEmail] = useState('m32220@gmail.com');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(false);
   const [error, setError] = useState('');
@@ -46,7 +46,7 @@ const Login = () => {
         <form onSubmit={handleSubmit} className="login-form" style={{ width: '100%', maxWidth: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 0 }}>
           <h2 style={{ fontWeight: 700, fontSize: '2.2rem', marginBottom: 8, color: '#222', textAlign: 'left' }}>Login</h2>
           <div style={{ color: '#888', fontWeight: 400, fontSize: 15, marginBottom: 28, textAlign: 'left' }}>WelcomeBack, Please Enter your Details to Log In.</div>
-          <label style={{ fontWeight: 500, marginBottom: 4, fontSize: 15, textAlign: 'left' }}>Email Adders</label>
+          <label style={{ fontWeight: 500, marginBottom: 4, fontSize: 15, textAlign: 'left' }}>Email Address</label>
           <input type="email" value={email} onChange={e => setEmail(e.target.value)} required style={{ padding: '13px 14px', borderRadius: 6, border: '1px solid #e0e0e0', fontSize: '1rem', marginBottom: 18 }} />
           <label style={{ fontWeight: 500, marginBottom: 4, fontSize: 15, textAlign: 'left' }}>Password</label>
           <input type="password" value={password} onChange={e => setPassword(e.target.value)} required style={{ padding: '13px 14px', borderRadius: 6, border: '1px solid #e0e0e0', fontSize: '1rem', marginBottom: 18 }} />
