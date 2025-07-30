@@ -8,7 +8,6 @@ This project is a MERN (MongoDB, Express, React, Node.js) stack application. The
 
 ## Getting Started
 Instructions for running both frontend and backend will be added after setup.
-"# task-manager" 
-"# WorkMates" 
-"# WorkMates" 
-"# WorkMates" 
+#clone this project
+#go backend file then run "npm install" then run "npm run dev"
+#after setup backend , go frontend file , run "npm install", then run "npm start"
